@@ -1,0 +1,236 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+
+}
+
+.startScreen {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+
+}
+
+.startLogo {
+
+    margin-top: -10%;
+    width: 60vw;
+    height: 60vh; /* adjust */
+
+}
+
+.pressText {
+
+    margin-top: -10%;
+
+    color: #E50914;
+
+    font-size: 22px;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    text-align: center;
+
+    animation: blink 1.2s infinite;
+
+}
+
+.loadingVideo {
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+
+}
+
+.profileScreen {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+}
+#who {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(0.95);
+
+    z-index: 1;
+}
+.profiles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* 1. Higher z-index to sit above #who */
+    z-index: 10; 
+
+    /* 2. Pass clicks through empty space to the background if needed */
+    pointer-events: none; 
+}
+
+/* Re-enable clicks specifically for the buttons */
+.profileBtn {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s;
+    
+    pointer-events: auto; 
+}
+
+.profileBtn img {
+
+    width: 40%; /* adjust */
+
+    border-radius: 6px;
+
+}
+
+.profileBtn p {
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 20px;
+
+    margin-top: 10px;
+
+}
+
+.profileBtn:hover {
+
+    transform: scale(1.1);
+
+}
+
+#aviBtn {
+
+    left: 12.7%;
+    top: 39.8%;
+
+}
+
+#meowBtn {
+
+    left: 27.8%;
+    top: 39.8%;
+
+}
+
+#meowaviBtn {
+
+    left: 42.8%;
+    top: 39.8%;
+
+}
+
+#crazyBtn {
+
+    left: 57.9%;
+    top: 39.8%;
+
+}
+
+.netflixScreen {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #191919;
+
+}
+
+.netflixBg {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+
+}
+
+#playBtn {
+
+    position: absolute;
+
+    left: -11.7%;
+    top: 80%;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    transition: transform 0.25s;
+
+}
+
+#playBtn:hover {
+
+    transform: scale(1.1);
+
+}
+
+#playBtn img {
+
+    width: 27%;
+
+}
+
+.editScreen {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+
+}
+
+.editVideo {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
